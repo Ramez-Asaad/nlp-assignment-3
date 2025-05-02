@@ -65,7 +65,7 @@ def pad_sequence(seq: List[int], max_length: int, pad_idx: int = 0) -> List[int]
         return seq + [pad_idx] * (max_length - len(seq))
     return seq[:max_length]
 
-''''
+
 def get_word2idx():
     """
     Loads word2idx mapping from a JSON file.
@@ -87,4 +87,3 @@ def encode_sentence(tokens, word2idx, max_len=50):
     ids = ids[:max_len]
     ids += [pad_token] * (max_len - len(ids))
     return ids
-  '''
