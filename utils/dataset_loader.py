@@ -2,7 +2,6 @@ from datasets import load_dataset
 from preprocessing import encode_sentence
 import numpy as np
 from transformers import AutoTokenizer
-from torch.utils.data import DataLoader
 
 def load_wikitext(split='train', max_length=50, vocab_size=50000):
     # Load dataset from Hugging Face
