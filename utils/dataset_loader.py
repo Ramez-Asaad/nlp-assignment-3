@@ -22,20 +22,6 @@ def load_wikitext(split='train', max_length=50, vocab_size=50000):
     tokenized_dataset.set_format(type='torch', columns=['input_ids'])
     return tokenized_dataset, tokenizer
   
-def get_dataloaders(batch_size=32, max_length=50):
-    """
-    Returns PyTorch DataLoaders for train/val/test splits.
-    """
-    train_data, tokenizer = load_wikitext("train", max_length=max_length)
-    val_data, _ = load_wikitext("validation", max_length=max_length)
-    test_data, _ = load_wikitext("test", max_length=max_length)
-
-    train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(val_data, batch_size=batch_size)
-    test_loader = DataLoader(test_data, batch_size=batch_size)
-
-    return train_loader, val_loader, test_loader, tokenizer
-  
 def load_dataset_from_txt(path, word2idx, max_len=50):
     sequences = []
     with open(path, "r", encoding="utf-8") as f:
