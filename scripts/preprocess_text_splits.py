@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath('G:\\OneDrive - Alamein International University
 ###path of utils folder
 sys.path.append(os.path.abspath('G:\\OneDrive - Alamein International University\\Uni stuff\\semester 6 - Spring 24-25\\NLP\\assignments\\assignment 3 v0.1\\nlp-assignment-3\\utils'))
 from datasets import load_dataset
-from utils.preprocessing import clean_text, tokenize_text
+from preprocessing import clean_text, tokenize_text
 
 def save_split(split_name):
     print(f"🔄 Processing split: {split_name}")
